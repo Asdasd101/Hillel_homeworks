@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS selectors</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <main>
+            <div>
+                <section>
+                    <p>Застосовується до тегів section, вага 1</p>
+                </section>
+            </div>
+            <div class="container">
+                <p>Застосовується до тегів p, що вкладені у div з класом container, вага 11</p>
+            </div>
+            <div id="container">
+                <p>Застосовується до тегів p, що вкладені у div з ідентифікатором container, вага 101</p>
+            </div>
+            <div>
+                <p class="message">Застосовується до тегів p, що вкладені у div та атрибут яких зкінчується на e, вага 12</p>
+            </div>
+            <div>
+                <p>Застосовується до тегів p, вкладених у div, на першому рівні, вага 2</p>
+            </div>
+            <div>
+                <h1></h1>
+                <p>Застосовується лише для першого p після h1, вага 2</p>
+            </div>
+            <div>
+                <section>
+                    <p class="message">Застосовується для всіх тегів з класом message, вкладених у section, що вкладений у div на першому рівні, вага 12</p>
+                </section>
+            </div>
+            <div id="section_8">
+                <div id="subsection_8">
+                    <p>Застосовується до p, що вкладений в section з ідентифікатором subsection_8, що вкладений у div з ідентифікатором section_8, вага 201</p>
+                </div>
+            </div>
+            <div id="section_9">
+                <section class="subsection_8">
+                    <p>Застосовується до p, що вкладений в section з класом subsection_8, що вкладений у div з ідентифікатором section_8, вага 21</p>
+                </section>
+            </div>
+            <div class="section_8">
+                <section class="subsection_8">
+                    <p>Застосовується до p, що вкладений в section з класом subsection_8, що вкладений у div з класом section_8, вага 20</p>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

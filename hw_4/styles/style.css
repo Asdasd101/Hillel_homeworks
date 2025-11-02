@@ -1,0 +1,39 @@
+section p {
+    background-color: yellow;
+}
+
+.container p {
+    background-color: green;
+}
+
+#container p {
+    background-color: blue;
+}
+
+div p[class$="e"] {
+    background-color: red;
+}
+
+div > p {
+    background-color: purple;
+}
+
+h1 + p {
+    background-color: greenyellow;
+}
+
+div > section > .message {
+    background-color: aqua;
+}
+
+#section_8 #subsection_8 p {
+    background-color: goldenrod;
+}
+
+#section_9 .subsection_8 p {
+    background-color: aquamarine;
+}
+
+.section_8 .subsection_8 p{
+    background-color: darkred;
+}
