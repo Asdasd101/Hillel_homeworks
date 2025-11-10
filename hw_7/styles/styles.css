@@ -1,0 +1,79 @@
+.container {
+    box-sizing: border-box;
+}
+
+.div_block {
+    display: block;
+}
+
+.div_inline {
+    display: inline;
+}
+
+.div_inline_block {
+    display: inline-block;
+}
+
+.div_flex {
+    display: flex;
+}
+
+.div_inline_flex {
+    display: inline-flex;
+}
+
+.image_float_left {
+    width: 400px;
+    height: 400px;
+    float: left;
+}
+
+.image_float_right {
+    width: 400px;
+    height: 400px;
+    float: right;
+}
+
+.image_no_float {
+    width: 400px;
+    height: 400px;
+    clear: both;
+}
+
+.div_overflow_hidden {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.div_overflow_scroll {
+    width: 400px;
+    height: 400px;
+    overflow: scroll;
+}
+
+.div_overflow_auto {
+    width: 400px;
+    height: 400px;
+    overflow: scroll;
+}
+
+.position_static {
+    position: static;
+}
+
+.position_relative {
+    position: relative;
+}
+
+.position_absolute {
+    position: absolute;
+}
+
+.position_fixed {
+    position: fixed;
+}
+
+.position_sticky {
+    position: sticky;
+}
