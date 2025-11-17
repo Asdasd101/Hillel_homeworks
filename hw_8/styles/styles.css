@@ -1,0 +1,38 @@
+.float_left {
+    float: left;
+    width: 20%;
+}
+
+.float_right {
+    float: right;
+    width: 20%;
+}
+
+.container {
+    height: 50px;
+    margin-top: 50px;
+}
+
+.container:first-child {
+    margin-top: 0px;
+}
+
+.float_right_second {
+    float: right;
+    width: 5%;
+}
+
+.float_right_third {
+    float: right;
+    width: 20%;
+    height: 40%;
+    width: 100%;
+}
+
+.right_column {
+    float: right;
+}
+
+.centered_container {
+    margin-right: 805px;
+}
