@@ -36,6 +36,10 @@ header {
     font-size: 16px;
 }
 
+.menu li {
+    transition: 0.2s;
+}
+
 .menu li:hover {
     color: #34547A;
 }
