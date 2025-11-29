@@ -1,0 +1,67 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+header {
+  background-color: $color-light;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 60px;
+  }
+
+  p {
+    font-size: 16px;
+    width: 50%;
+    line-height: 30px;
+    margin-bottom: 65px;
+  }
+
+  button {
+    @include btn($color-dark, $color-white, 225px, 65px);
+    margin-bottom: 100px;
+  }
+}
+
+.navigation {
+  padding-block: 79px;
+}
+
+.menu {
+  display: flex;
+  gap: 48px;
+  text-transform: uppercase;
+  font-size: 16px;
+
+  li {
+    list-style-type: none;
+    transition: $transition-fast;
+
+    &:hover {
+      color: $color-dark;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  header {
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      @include responsive-text-center;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-main;
+}
+
+p {
+  color: $color-text;
+}
+
+.container {
+  @include container;
+}

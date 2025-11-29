@@ -1,0 +1,21 @@
+@use "variables" as *;
+
+.credits {
+  background-color: $color-dark;
+
+  .container {
+    height: 151px;
+    justify-content: center;
+    padding: 50px;
+    margin-bottom: 0;
+  }
+
+  p {
+    color: $color-white;
+  }
+
+  span {
+    font-weight: 500;
+    font-size: 21px;
+  }
+}

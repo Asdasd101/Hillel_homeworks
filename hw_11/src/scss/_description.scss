@@ -1,0 +1,86 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.description,
+.working-description {
+  padding-top: 100px;
+
+  .container {
+    @include flex-center-column;
+  }
+
+  p {
+    margin-bottom: 100px;
+  }
+}
+
+.description {
+  background-color: $color-light;
+}
+
+main {
+  h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 30px;
+    width: 540px;
+    text-align: center;
+  }
+}
+
+.projects {
+  background-color: $color-dark;
+
+  .my-projects {
+    display: flex;
+    justify-content: center;
+    background-color: $color-dark;
+    padding: 100px 0;
+    gap: 45px;
+
+    li {
+      width: auto;
+      height: 50px;
+      background-image: url(../images/project-icon.svg);
+      background-repeat: no-repeat;
+      background-position: left center;
+      padding-left: 60px;
+      color: $color-white;
+      list-style-type: none;
+
+      span {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+.working-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .working-description p {
+    width: 100%;
+  }
+
+  .my-projects {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      width: auto;
+    }
+  }
+
+  .description p {
+    width: 100%;
+  }
+}
