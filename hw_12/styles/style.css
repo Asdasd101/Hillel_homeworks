@@ -9,8 +9,6 @@ svg {
 }
 
 .square {
-    width: 50px;
-    height: 50px;
     fill: red;
     stroke-width: 5px;
     stroke: black;
@@ -18,8 +16,6 @@ svg {
 }
 
 .rectangle {
-    width: 100px;
-    height: 50px;
     fill: yellow;
     stroke-width: 6px;
     stroke: green;
@@ -27,9 +23,6 @@ svg {
 }
 
 .circle {
-    cx: 50px;
-    cy: 50px;
-    r: 40px;
     stroke-width: 7px;
     stroke: pink;
     fill: orange;
@@ -37,11 +30,7 @@ svg {
 }
 
 .ellipse {
-    cx: 80px;
-    cy: 80px;
-    rx: 70px;
-    ry: 50px;
-    stroke-width: 7px;
+    stroke-width: 8px;
     stroke: darkkhaki;
     fill: cyan;
     animation: ellipse 5s infinite;
