@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Wings of Earth</title>
-        <link rel="stylesheet" href="../src/output.css">
+        <link rel="stylesheet" href="src/output.css">
     </head>
     <body class="font-sans leading-loose">
         <header>
@@ -16,7 +16,7 @@
                     </h1>
                     <ul class="flex justify-center gap-5 ml-auto p-0">
                         <li class="list-none text-xl transition-transform duration-200 hover:scale-125">
-                            <a href="../index.html"
+                            <a href="index.html"
                             class="no-underline text-black transition-colors duration-200 hover:text-white">
                                 Головна
                             </a>
@@ -52,14 +52,26 @@
         <main>
             <div class="max-w-[1700px] mx-auto px-4 mt-5">
                 <h2 class="text-center text-[25px]">
-                    Про нас
+                    Контакти
                 </h2>
-                <p class="text-center text-[20px]">
-                    «Wings of Earth» — це українська онлайн-галерея, присвячена птахам України: їх розмаїттю, красі та ролі в природі. 
-                    На сайті користувачі знайдуть чудові фотографії птахів різних видів, з усього українського ландшафту — від лісів і гір 
-                    до степів і водно-болотних угідь. Основна мета проєкту — популяризація орнітофауни України, підвищення екологічної 
-                    свідомості та надихнення захопитися спостереженням за птахами.
-                </p>
+                <p class="text-center">Номер телефону: +380 77 123 4567</p>
+                <p class="text-center">Email: not.a.real.person.testing.email@gmail.com</p>
+                <h3 class="text-center">
+                    Ви також можете надіслати повідомлення на нашу пошту через форму:
+                </h3>
+                <form class="ml-4 flex flex-col items-center">
+
+                    <label for="name">Ім'я:</label>
+                    <input type="text" id="name" name="name" class="block mb-2.5 border rounded px-2 py-1">
+
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" id="email" name="email" class="block mb-2.5 border rounded px-2 py-1">
+
+                    <label for="text">Повідомлення:</label>
+                    <input type="text" id="text" name="text" class="block mb-2.5 border rounded px-2 py-1">
+
+                    <input type="submit" value="Надіслати" class="mt-2 px-4 py-2 border rounded cursor-pointer transition-colors duration-200 hover:bg-[#23bd5e] hover:text-white">
+                </form>
             </div>
         </main>
     </body>
