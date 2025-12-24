@@ -1,0 +1,43 @@
+.intro{
+  margin-top:30px;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack:justify;
+      -ms-flex-pack:justify;
+          justify-content:space-between;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+}
+.intro nav{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  gap:35px;
+}
+.intro_buttons{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  gap:10px;
+}
+.intro .login{
+  color:#5BB5A2;
+  background-color:none;
+  border:none;
+}
+
+*{
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+.container{
+  width:100%;
+  max-width:1800px;
+  margin:0 auto;
+  padding:0 16px;
+}
