@@ -144,7 +144,7 @@ export class CoolSlider {
     silentlyMoveToSlide(slide) {
         this.sliderLine.classList.remove('slow-switch');
         this.sliderLine.style.transform = `translate(${slide * -SLIDER_WIDTH}px)`;
-        this.sliderLine.offsetHeight; // примінити клас, який ми видалили, перерахувати ДОМ
+        this.sliderLine.offsetHeight;
         this.sliderLine.classList.add('slow-switch');
     }
 }
