@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Movie Search</title>
+        <link rel="stylesheet" href="movieStyle.css">
+    </head>
+    <body>
+        <div>
+            <label for="searchInput">Search:</label>
+            <p>
+                <input type="text" id="searchInput" placeholder="Search movies">
+            </p>
+        </div>
+
+        <div id="emptyInfo">Please enter a value to search. Should be more than 3 symbols</div>
+
+        <div id="loading" class="loader hidden"></div>
+
+        <div id="error" class="hidden">Some error</div>
+
+        <div id="resultContainer"></div>
+
+
+        <script type="module" src="movieSearch.js"></script>
+    </body>
+</html>

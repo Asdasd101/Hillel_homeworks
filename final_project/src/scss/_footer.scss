@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+footer {
+    border-top: 1px solid #E8E8E8;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    p {
+        font-size: $text-h6;
+        margin-bottom: 20px;
+    }
+
+    li {
+        font-size: $text-default;
+        color: #1A191E;
+        margin-bottom: 10px;
+    }
+}
+
+.credits {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #E8E8E8;
+
+    div {
+        gap: 20px;
+    }
+}

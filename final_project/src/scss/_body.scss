@@ -1,0 +1,422 @@
+@use "variables" as *;
+
+.intro_description {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 100px;
+
+    .first_block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            font-size: $heading-medium;
+        }
+
+        h2 {
+            font-size: $text-xlarge;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        li {
+            font-size: $text-medium;
+            list-style-type: none;
+            position: relative;
+            padding-left: 32px;
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10%;
+            width: 20px;
+            height: 20px;
+            background-image: url("../../src/img/badge.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .inline-buttons {
+        display: flex;
+        gap: 30px;
+    }
+
+    .second_block {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.app_description {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 100px;
+
+    h1 {
+        font-size: $text-h1;
+    }
+
+    h3 {
+        font-size: $text-h5;
+    }
+
+    p {
+        font-size: $text-default;
+    }
+
+    .functions {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 20px;
+
+        div {
+            border: solid 2px #E8E8E8;
+            border-radius: 15px;
+            padding: 10px;
+        }
+    }
+
+    .second_block {
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 800px;
+        }
+    }
+}
+
+.transactions_description {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 100px;
+    background-color: #E8F2EE;
+    padding-top: 100px;
+
+    h1 {
+        font-size: $text-h2;
+    }
+
+    p {
+        font-size: $text-large;
+        margin-bottom: 20px;
+    }
+
+    li {
+        font-size: $text-medium;
+        list-style-type: none;
+        position: relative;
+        padding-left: 32px;
+    }
+
+    li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10%;
+        width: 20px;
+        height: 20px;
+        background-image: url("../../src/img/badge_second.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .second_block {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.organize_description {
+
+    h1 {
+        font-size: $text-h2;
+    }
+
+    p {
+        font-size: $text-large;
+    }
+
+    .frames {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        margin-top: 20px;
+
+        h2 {
+            font-size: $text-h5;
+        }
+
+        p {
+            font-size: $text-small;
+        }
+    }
+}
+
+.heading {
+    font-size: $text-h5;
+}
+
+.notifications_description {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 100px;
+    margin-top: 100px;
+
+    h1 {
+        font-size: $text-h2;
+    }
+
+    p {
+        font-size: $text-medium;
+    }
+
+    li {
+        font-size: $text-default;
+        list-style-type: none;
+        position: relative;
+        padding-left: 32px;
+    }
+
+    li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10%;
+        width: 20px;
+        height: 20px;
+        background-image: url("../../src/img/badge.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .second_block {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.integration_description {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 100px;
+    margin-top: 50px;
+
+    h1 {
+        font-size: $text-h2;
+    }
+
+    p {
+        font-size: $text-medium;
+    }
+
+    li {
+        font-size: $text-medium;
+        list-style-type: none;
+        position: relative;
+        padding-left: 32px;
+    }
+
+    li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10%;
+        width: 20px;
+        height: 20px;
+        background-image: url("../../src/img/badge.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .second_block {
+        display: flex;
+        align-items: end;
+    }
+}
+
+.account_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+
+    h1 {
+        font-size: $text-h1;
+    }
+
+    p {
+        font-size: $text-large;
+    }
+
+    img {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+.testimonials_description {
+    margin-bottom: 100px;
+
+    h1 {
+        font-size: $text-h2;
+        margin-bottom: 20px;
+    }
+
+    .testimonials {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 30% 30% 30%;
+        gap: 30px;
+
+        .testimonial {
+            border: solid 2px #E8E8E8;
+            border-radius: 15px;
+            padding: 10px;
+
+            h2 {
+                font-size: $text-h4;
+            }
+
+            p {
+                font-size: $text-default;
+            }
+
+            .uploader {
+                font-size: $text-h6;
+            }
+
+            .job {
+                font-size: $text-small;
+            }
+        }
+    }
+}
+
+
+.blog_description {
+    margin-bottom: 100px;
+
+    h1 {
+        font-size: $text-h2;
+        margin-bottom: 20px;
+    }
+}
+
+.blogs {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+
+    .blog {
+        h1 {
+            font-size: $text-h4;
+        }
+
+        p {
+            font-size: $text-default;
+        }
+    }
+
+    .tags {
+        display: flex;
+        gap: 10px;
+
+        p {
+            font-size: $text-xsmall;
+        }
+    }
+}
+
+.information {
+    p {
+        font-size: $text-h6;
+    }
+
+    li {
+        font-size: $text-default;
+        list-style-type: none;
+    }
+}
+
+.credits {
+    div {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .intro_description {
+        grid-template-columns: 100%;
+
+        .first_block {
+            margin-bottom: 20px;
+        }
+    }
+
+    .app_description {
+        grid-template-columns: 100%;
+
+        .first_block {
+            margin-bottom: 20px;
+        }
+    }
+
+    .transactions_description {
+        grid-template-columns: 100%;
+
+        .first_block {
+            margin-bottom: 20px;
+        }
+    }
+
+    .organize_description {
+        grid-template-columns: 100%;
+
+        .frames {
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+    }
+
+    .notifications_description {
+        grid-template-columns: 100%;
+
+        .first_block {
+            margin-bottom: 20px;
+        }
+    }
+
+    .integration_description {
+        grid-template-columns: 100%;
+
+        .first_block {
+            margin-bottom: 20px;
+        }
+    }
+
+    .testimonials_description {
+        .testimonials {
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    .blog_description {
+        .blogs {
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            .blog {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

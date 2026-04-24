@@ -1,22 +1,72 @@
+@use "variables" as *;
+
 .intro {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 80px;
+    font-size: $text-default;
 
     nav {
         display: flex;
         gap: 35px;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            transition: $transition-fast;
+            color: #5BB5A2;
+        }
     }
 
     &_buttons {
         display: flex;
         gap: 10px;
     }
+}
 
-    .login {
-        color: #5BB5A2;
-        background-color: none;
-        border: none;
-    }
+.login {
+    color: #5BB5A2;
+    background: none;
+    border: none;
+    font-size: $text-medium;
+}
+
+.register {
+    color: #FFFFFF;
+    background-color: #5BB5A2;
+    border: none;
+    padding: 7px;
+    border-radius: 7px;
+    font-size: $text-medium;
+}
+
+.intro_blog {
+  position: relative;
+}
+
+.blog-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #E8F2EE;
+  border: 1px solid #ccc;
+  min-width: 150px;
+  border-radius: 12px;
+}
+
+.blog-menu a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.intro_blog:hover .blog-menu {
+  display: block;
 }

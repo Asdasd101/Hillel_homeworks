@@ -1,0 +1,52 @@
+@use "variables" as *;
+
+.blog_part {
+    h1 {
+        font-size: $heading-medium;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+
+.blog_sort {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    h2 {
+        font-size: $text-h6;
+    }
+
+    ul {
+        margin-left: 30px;
+        display: flex;
+        gap: 20px;
+
+        li {
+            font-size: $text-small;
+            list-style-type: none;
+        }
+    }
+}
+
+.blog {
+    h1 {
+        font-size: $text-h4;
+        text-align: start;
+        margin-bottom: 0px;
+    }
+
+    p {
+        font-size: $text-default;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .blogs {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin-bottom: 20px;
+    }
+}

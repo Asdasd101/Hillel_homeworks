@@ -1,0 +1,34 @@
+@use "variables" as *;
+
+.blog_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+    h1 {
+        font-size: $text-h2;
+    }
+
+    h2 {
+        font-size: $text-h4;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: $text-medium;
+    }
+
+    .blog_introduction {
+        font-size: $text-large;
+        margin-bottom: 50px;
+    }
+
+    .tag {
+        color: #5BB5A2;
+        background: #E8F2EE;
+        padding: 5px;
+        border-radius: 15%;
+    }
+}
