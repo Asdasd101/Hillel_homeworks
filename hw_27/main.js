@@ -171,7 +171,7 @@ function moveToSlide(slide) {
 function silentlyMoveToSlide(slide) {
   sliderLine.classList.remove('slow-switch');
   sliderLine.style.transform = `translate(${slide * -SLIDER_WIDTH}px)`;
-  sliderLine.offsetHeight; // примінити клас, який ми видалили, перерахувати ДОМ
+  sliderLine.offsetHeight;
   sliderLine.classList.add('slow-switch');
 }
 
