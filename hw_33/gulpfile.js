@@ -35,7 +35,7 @@ function compileScss() {
     .pipe(postcss(PLUGINS))
     .pipe(csscomb())
     .pipe(dest(PATH.cssFolder))
-    .pipe(browserSync.stream()); // ✅ fixed
+    .pipe(browserSync.stream());
 }
 
 function compileScssDev() {
@@ -45,7 +45,7 @@ function compileScssDev() {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(pluginsForDevMode))
     .pipe(dest(PATH.cssFolder, { sourcemaps: true }))
-    .pipe(browserSync.stream()); // ✅ fixed
+    .pipe(browserSync.stream());
 }
 
 function compileScssMin() {
