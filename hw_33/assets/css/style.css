@@ -1,0 +1,278 @@
+*,
+*::before,
+*::after
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'DM Mono', 'Courier New', monospace;
+    font-size: 15px;
+    line-height: 1.7;
+
+    min-height: 100vh;
+
+    color: #1a1a2e;
+    background-color: #f5f0e8;
+}
+
+.container
+{
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header
+{
+    padding: 1.5rem 0;
+
+    border-bottom: 2px solid #1a1a2e;
+}
+header .container
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
+header .logo
+{
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.6rem;
+
+    text-decoration: none;
+    letter-spacing: -.02em;
+
+    color: #1a1a2e;
+}
+header .logo span
+{
+    color: #c0392b;
+}
+header nav
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    gap: 2rem;
+}
+header nav a
+{
+    font-size: .8rem;
+
+    -webkit-transition: color .15s;
+            transition: color .15s;
+    text-decoration: none;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+
+    color: #7a6f63;
+}
+header nav a:hover
+{
+    color: #c0392b;
+}
+
+.hero
+{
+    padding: 5rem 0 4rem;
+
+    border-bottom: 1px solid #d4c5a9;
+}
+.hero .label
+{
+    font-size: .72rem;
+
+    margin-bottom: 1rem;
+
+    letter-spacing: .2em;
+    text-transform: uppercase;
+
+    color: #c0392b;
+}
+.hero h1
+{
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.1;
+
+    max-width: 14ch;
+    margin-bottom: 1.5rem;
+
+    letter-spacing: -.03em;
+}
+.hero p
+{
+    font-size: .95rem;
+
+    max-width: 46ch;
+    margin-bottom: 2.5rem;
+
+    color: #7a6f63;
+}
+.hero .cta
+{
+    font-size: .8rem;
+
+    display: inline-block;
+
+    padding: .75rem 2rem;
+
+    -webkit-transition: -webkit-transform .2s ease, -webkit-box-shadow .2s ease;
+            transition: -webkit-transform .2s ease, -webkit-box-shadow .2s ease;
+            transition:         transform .2s ease, box-shadow .2s ease;
+            transition:         transform .2s ease, box-shadow .2s ease, -webkit-transform .2s ease, -webkit-box-shadow .2s ease;
+    text-decoration: none;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+
+    color: #f5f0e8;
+    border: 2px solid #1a1a2e;
+    background: #1a1a2e;
+}
+.hero .cta:hover
+{
+    -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+            transform: translateY(-3px);
+
+    -webkit-box-shadow: 4px 6px 0 #1a1a2e;
+            box-shadow: 4px 6px 0 #1a1a2e;
+}
+.hero .cta--outline
+{
+    margin-left: 1rem;
+
+    color: #1a1a2e;
+    background: transparent;
+}
+
+.cards
+{
+    padding: 4rem 0;
+}
+.cards .section-title
+{
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.6rem;
+
+    margin-bottom: 2.5rem;
+
+    letter-spacing: -.02em;
+}
+.cards .grid
+{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+}
+.cards .card
+{
+    padding: 1.8rem;
+
+    -webkit-transition: -webkit-transform .2s ease, -webkit-box-shadow .2s ease;
+            transition: -webkit-transform .2s ease, -webkit-box-shadow .2s ease;
+            transition:         transform .2s ease, box-shadow .2s ease;
+            transition:         transform .2s ease, box-shadow .2s ease, -webkit-transform .2s ease, -webkit-box-shadow .2s ease;
+
+    border: 2px solid #1a1a2e;
+    background: #f5f0e8;
+}
+.cards .card:hover
+{
+    -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+            transform: translateY(-3px);
+
+    -webkit-box-shadow: 4px 6px 0 #1a1a2e;
+            box-shadow: 4px 6px 0 #1a1a2e;
+}
+.cards .card
+{
+    cursor: pointer;
+}
+.cards .card__number
+{
+    font-size: .7rem;
+
+    margin-bottom: 1rem;
+
+    letter-spacing: .15em;
+
+    color: #7a6f63;
+}
+.cards .card__title
+{
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.2rem;
+
+    margin-bottom: .6rem;
+}
+.cards .card__text
+{
+    font-size: .85rem;
+    line-height: 1.6;
+
+    color: #7a6f63;
+}
+.cards .card:nth-child(2)
+{
+    color: #f5f0e8;
+    background: #1a1a2e;
+}
+.cards .card:nth-child(2) .card__number,
+.cards .card:nth-child(2) .card__text
+{
+    color: #d4c5a9;
+}
+
+footer
+{
+    padding: 2rem 0;
+
+    border-top: 2px solid #1a1a2e;
+}
+footer .container
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+footer p
+{
+    font-size: .78rem;
+
+    letter-spacing: .05em;
+
+    color: #7a6f63;
+}
+footer .dot
+{
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background: #c0392b;
+}
