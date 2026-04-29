@@ -1,0 +1,199 @@
+$cream:       #f5f0e8;
+$ink:         #1a1a2e;
+$rust:        #c0392b;
+$sand:        #d4c5a9;
+$muted:       #7a6f63;
+
+$font-display: 'Playfair Display', Georgia, serif;
+$font-body:    'DM Mono', 'Courier New', monospace;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 6px 0 $ink;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: $cream;
+  color: $ink;
+  font-family: $font-body;
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header {
+  border-bottom: 2px solid $ink;
+  padding: 1.5rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .logo {
+    font-family: $font-display;
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+    color: $ink;
+    text-decoration: none;
+
+    span {
+      color: $rust;
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: $muted;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.15s;
+
+      &:hover { color: $rust; }
+    }
+  }
+}
+
+.hero {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid $sand;
+
+  .label {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $rust;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-family: $font-display;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    max-width: 14ch;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    color: $muted;
+    max-width: 46ch;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .cta {
+    display: inline-block;
+    background: $ink;
+    color: $cream;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 2px solid $ink;
+    @include hover-lift;
+
+    &--outline {
+      background: transparent;
+      color: $ink;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.cards {
+  padding: 4rem 0;
+
+  .section-title {
+    font-family: $font-display;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    border: 2px solid $ink;
+    padding: 1.8rem;
+    background: $cream;
+    @include hover-lift;
+    cursor: pointer;
+
+    &__number {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: $muted;
+      margin-bottom: 1rem;
+    }
+
+    &__title {
+      font-family: $font-display;
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    &__text {
+      font-size: 0.85rem;
+      color: $muted;
+      line-height: 1.6;
+    }
+
+    &:nth-child(2) { background: $ink; color: $cream;
+      .card__number, .card__text { color: $sand; }
+    }
+  }
+}
+
+footer {
+  border-top: 2px solid $ink;
+  padding: 2rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  p {
+    font-size: 0.78rem;
+    color: $muted;
+    letter-spacing: 0.05em;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $rust;
+    display: inline-block;
+  }
+}
