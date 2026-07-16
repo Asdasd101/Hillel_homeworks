@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= article.title %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <article class="card">
+            <h1><%= article.title %></h1>
+            <p class="meta">Категорія: <strong><%= article.category %></strong></p>
+            <p class="content"><%= article.content %></p>
+        </article>
+        <a class="back-link" href="/articles">Назад до статей</a>
+    </div>
+</body>
+</html>

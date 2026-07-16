@@ -1,0 +1,13 @@
+doctype html
+html 
+    head
+        title Список користувачів
+        link(rel="stylesheet", href="../public/style.css")
+    body 
+        .container
+            h1 Наші користувачі
+            ul.list
+                each user in users
+                    li 
+                    a(href=`/users/${user.id}`) #{user.name} (Роль: #{user.role})
+            a.back-link(href="/") На головну

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список статей</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Свіжі публікації</h1>
+        <ul class="list">
+            <% articles.forEach(article => { %>
+                <li>
+                    <a href="/articles/<%= article.id %>">
+                        <%= article.title %>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+        <a class="back-link" href="/">На головну</a>
+    </div>
+</body>
+</html>

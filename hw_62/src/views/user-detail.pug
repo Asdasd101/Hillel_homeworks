@@ -1,0 +1,19 @@
+doctype html
+html 
+    head 
+        title Профіль користувача
+        link(rel="stylesheet", href="../public/style.css")
+    body 
+        .container 
+            h1 Профіль користувача #{user.username}
+            .card 
+                p 
+                    strong ID: 
+                    span #{user.id}
+                p 
+                    strong Ім'я:
+                    span #{user.username}
+                p 
+                    strong Роль у системі:
+                    span #{user.role}
+            a.back-link(href="/users") Назад до списку
