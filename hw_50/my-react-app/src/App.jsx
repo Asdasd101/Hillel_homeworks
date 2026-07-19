@@ -17,7 +17,7 @@ export default function App() {
   const [clickCount, setClickCount] = useState(0);
 
   const expensiveCalculation = (num) => {
-    console.log('⚡ Обчислення...');
+    console.log('Обчислення...');
     for (let i = 0; i < 1000000000; i++) {} 
     return num * 2;
   };
