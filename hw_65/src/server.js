@@ -15,7 +15,7 @@ const port = 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const uri = "mongodb+srv://conan:conan11066778899@cluster0.a3o2bzi.mongodb.net/?appName=Cluster0";
+const uri = "mongodb+srv://conan:conan1234@cluster0.a3o2bzi.mongodb.net/?appName=Cluster0";
 const dbName = "myDatabase";
 
 const client = new MongoClient(uri);
