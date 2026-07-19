@@ -1,29 +1,28 @@
 import express from 'express';
-import jwt from 'jsonwebtoken';
+import passport from 'passport';
 
 const router = express.Router();
-const JWT_SECRET = 'super-secret-key-123';
 
-router.post('/login', (req, res) => {
-    const { username, password } = req.body;
-
-    if (username && password === username) {
-        const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '1h' });
-
-        res.cookie('token', token, {
-            httpOnly: true,
-            maxAge: 3600000
-        });
-
-        return res.send('Вхід успішний! Токен збережено в куках.');
-    }
-
-    res.status(401).send('Неправильний логін або пароль.');
+router.post('/login', passport.authenticate('local', { failureMessage: true }), (req, res) => {
+    res.send(`Вхід успішний! Вітаємо, ${req.user.name}. Сесію створено`);
 });
 
-router.post('/logout', (req, res) => {
-    res.clearCookie('token');
-    res.send('Ви вийшли з системи.');
+router.post('/logout', (req, res, next) => {
+    req.logout((err) => {
+        if (err) return next(err);
+        res.send('Ви успішно вийшли з системи, сесію видалено');
+    });
+});
+
+export const isAuthenticated = (req, res, next) => {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.status(401).send('Доступ заборонено. Цей маршрут захищений. Будь ласка, увійдіть в систему');
+};
+
+router.get('/protected', isAuthenticated, (req, res) => {
+    res.send(`Ваші дані профілю: Email: ${req.user.email}, Ім'я: ${req.user.name}`);
 });
 
 export default router;

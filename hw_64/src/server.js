@@ -2,10 +2,11 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import cookieParser from 'cookie-parser';
+import session from 'express-session';
 import userRoutes from './routes/userRoutes.js';
 import articleRoutes from './routes/articleRoutes.js';
 import authRoutes from './routes/authRoutes.js';
-
+import passport from './config/passport.js';
 
 const app = express();
 const port = 3000;
@@ -19,13 +20,26 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, '../public')));
 app.set('views', path.join(__dirname, '../views'));
-
 app.set('view engine', 'pug');
 
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} request to ${req.url}`);
     next();
 });
+
+app.use(session({
+    secret: 'my-super-secret-session-key',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        httpOnly: true,
+        secure: false,
+        maxAge: 24 * 60 * 60 * 1000
+    }
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get('/set-theme/:theme', (req, res) => {
     const { theme } = req.params;
@@ -40,7 +54,7 @@ app.get('/set-theme/:theme', (req, res) => {
     });
 
     res.send(`Тему успішно змінено на: ${theme}. Поверніться на головну, щоб перевірити.`);
-})
+});
 
 app.use('/auth', authRoutes);
 app.use('/users', userRoutes);
@@ -57,7 +71,6 @@ app.get('/', (req, res) => {
             <link rel="icon" href="/favicon.ico">
             <link rel="stylesheet" href="/style.css">
             <style>
-                /* Просте перемикання кольорів залежно від теми */
                 body {
                     background-color: ${currentTheme === 'dark' ? '#1a202c' : '#f0f2f5'};
                     color: ${currentTheme === 'dark' ? '#f7fafc' : '#333'};
