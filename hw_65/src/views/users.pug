@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="icon", href="/favicon.ico")
+    link(rel="stylesheet", href="/style.css")
+  body
+    div.container
+      h1= title
+      a(href="/") ← На головну
+      hr
+      if users.length > 0
+        each user in users
+          div.user-card(style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 4px;")
+            h3 Нікнейм: #{user.username}
+            p Роль в системі: #{user.role}
+            a(href=`/users/${user._id}` style="display: inline-block; margin-top: 5px; color: #0066cc;") Переглянути профіль
+      else
+        p Користувачів у базі даних поки немає.
