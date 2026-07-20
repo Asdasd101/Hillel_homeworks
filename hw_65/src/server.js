@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -10,13 +11,13 @@ import authRoutes from './routes/authRoutes.js';
 import passport from './config/passport.js';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const uri = "mongodb+srv://conan:conan1234@cluster0.a3o2bzi.mongodb.net/?appName=Cluster0";
-const dbName = "myDatabase";
+const uri = process.env.MONGODB_URI;
+const dbName = process.env.DB_NAME;
 
 const client = new MongoClient(uri);
 
@@ -37,7 +38,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, '../public')));
-app.set('views', path.join(__dirname, './views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use((req, res, next) => {
@@ -46,7 +47,7 @@ app.use((req, res, next) => {
 });
 
 app.use(session({
-    secret: 'my-super-secret-session-key',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
