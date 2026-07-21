@@ -1,0 +1,26 @@
+use studentDB
+
+db.assignments.insertMany([
+  { name: "Олег", subject: "Математика", score: 75 },
+  { name: "Марія", subject: "Фізика", score: 82 },
+  { name: "Іван", subject: "Інформатика", score: 90 },
+  { name: "Анна", subject: "Хімія", score: 84 },
+  { name: "Дмитро", subject: "Історія", score: 68 }
+])
+
+db.assignments.find({ score: { $gt: 80 } })
+
+db.assignments.updateOne(
+  { score: { $lt: 85 } },
+  { $inc: { score: 5 } }
+)
+
+db.assignments.deleteOne(
+  {},
+  { sort: { score: 1 } }
+)
+
+db.assignments.find(
+  {},
+  { _id: 0, name: 1, score: 1 }
+)
